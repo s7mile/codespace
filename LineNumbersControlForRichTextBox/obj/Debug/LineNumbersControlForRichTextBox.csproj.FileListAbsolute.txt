@@ -1,0 +1,10 @@
+\\Mac\Home\Downloads\C--Numbered-Lines-Control-for-RichTextBox--LineNumbersControlForRichTextBox--master\LineNumbersControlForRichTextBox\bin\Debug\LineNumbersControlForRichTextBox.dll
+\\Mac\Home\Downloads\C--Numbered-Lines-Control-for-RichTextBox--LineNumbersControlForRichTextBox--master\LineNumbersControlForRichTextBox\bin\Debug\LineNumbersControlForRichTextBox.pdb
+\\Mac\Home\Downloads\C--Numbered-Lines-Control-for-RichTextBox--LineNumbersControlForRichTextBox--master\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.csprojResolveAssemblyReference.cache
+\\Mac\Home\Downloads\C--Numbered-Lines-Control-for-RichTextBox--LineNumbersControlForRichTextBox--master\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.dll
+\\Mac\Home\Downloads\C--Numbered-Lines-Control-for-RichTextBox--LineNumbersControlForRichTextBox--master\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.pdb
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\LineNumbersControlForRichTextBox\bin\Debug\LineNumbersControlForRichTextBox.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\LineNumbersControlForRichTextBox\bin\Debug\LineNumbersControlForRichTextBox.pdb
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.csprojResolveAssemblyReference.cache
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\LineNumbersControlForRichTextBox\obj\Debug\LineNumbersControlForRichTextBox.pdb

@@ -1,0 +1,10 @@
+\\Mac\Home\Downloads\NewCustomTabControl\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.dll
+\\Mac\Home\Downloads\NewCustomTabControl\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.pdb
+\\Mac\Home\Downloads\NewCustomTabControl\CustomTabControl\obj\x86\Debug\CustomTabControl.csprojResolveAssemblyReference.cache
+\\Mac\Home\Downloads\NewCustomTabControl\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.dll
+\\Mac\Home\Downloads\NewCustomTabControl\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.pdb
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.pdb
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\CustomTabControl\obj\x86\Debug\CustomTabControl.csprojResolveAssemblyReference.cache
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.pdb

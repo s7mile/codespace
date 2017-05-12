@@ -1,0 +1,14 @@
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\codespace.exe.config
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\codespace.exe
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\codespace.pdb
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.Form1.resources
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.Properties.Resources.resources
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.exe
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.pdb
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.Child.resources
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\LineNumbersControlForRichTextBox.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\LineNumbersControlForRichTextBox.pdb
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\JacksonSoft.CustomTabControl.dll
+\\mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\bin\Debug\JacksonSoft.CustomTabControl.pdb
