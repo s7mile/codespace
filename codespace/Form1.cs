@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using FastColoredTextBoxNS;
 
 namespace codespace
 {
@@ -51,14 +52,48 @@ namespace codespace
 
         private void saveMenu_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveDlg = new SaveFileDialog();
+            /* SaveFileDialog saveDlg = new SaveFileDialog();
             if(saveDlg.ShowDialog() == DialogResult.OK)
             {
                 string fName = this.customTabControl1.SelectedTab.Text;
                 StreamWriter write = new StreamWriter(fName);
                 //write.Write(this.customTabControl1.SelectedTab.);
                 write.Close();
+            } */
+            save(customTabControl1.SelectedTab);
+        }
+
+        private bool save(TabPage tab)
+        {
+            var tb = (tab.Controls[0] as FastColoredTextBox);
+            if (tab.Tag == null)
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                    return false;
+                tab.Text = Path.GetFileName(saveFileDialog1.FileName);
+                tab.Tag = saveFileDialog1.FileName;
+
+                StreamWriter write = new StreamWriter(tab.Text);
+                //write.Write(tb.Text);
+                //write.Close();
             }
+
+            /* try
+            {
+                File.WriteAllText(tab.Tag as string, tb.Text);
+                tb.IsChanged = false;
+            }
+            catch (Exception ex)
+            {
+                if (MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                    return save(tab);
+                else
+                    return false;
+            }
+
+            tb.Invalidate(); */
+
+            return true;
         }
 
         private void saveasMenu_Click(object sender, EventArgs e)

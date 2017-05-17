@@ -43,6 +43,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.customTabControl1 = new System.Windows.Forms.CustomTabControl();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -241,6 +242,7 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ToolStripMenuItem lineNumMenu;
         private System.Windows.Forms.CustomTabControl customTabControl1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

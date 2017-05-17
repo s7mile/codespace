@@ -1,0 +1,12 @@
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\bin\Debug\FastColoredTextBox.XML
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\bin\Debug\FastColoredTextBox.dll
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\bin\Debug\FastColoredTextBox.pdb
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBox.csprojResolveAssemblyReference.cache
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FastColoredTextBox.resources
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FindForm.resources
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.GoToForm.resources
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.HotkeysEditorForm.resources
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.ReplaceForm.resources
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBox.csproj.GenerateResource.Cache
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBox.dll
+\\Mac\Home\Downloads\FastColoredTextBox-master\FastColoredTextBox-master\FastColoredTextBox\obj\Debug\FastColoredTextBox.pdb
