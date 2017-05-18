@@ -90,6 +90,20 @@ namespace codespace
             }
             else return false;
         }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            if (tb.UndoEnabled)
+                tb.Undo();
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            if (tb.RedoEnabled)
+                tb.Redo();
+        }
     }
 
     public class myFormPage : Form

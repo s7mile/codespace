@@ -68,17 +68,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -97,6 +98,75 @@
       <Project>{6DD14A85-CCFC-4774-BD26-0F5772512319}</Project>
       <Name>FastColoredTextBox</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\1495105966_tile_windows_vertically_16x16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\copy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\file.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\file_add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\first.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder_close.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\help.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\home.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\last.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\ok.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\print.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\setting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\trash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\zoom.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\folder_open.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\left.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
