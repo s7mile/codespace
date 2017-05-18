@@ -27,7 +27,7 @@ namespace codespace
 
         private void newMenu_Click(object sender, EventArgs e)
         {
-            customTabControl1.TabPages.Add(new myTabPage(new Child()));
+            customTabControl1.TabPages.Add(new myTabPage(new Child(), "new"));
             this.customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count-1];
         }
 
@@ -41,8 +41,9 @@ namespace codespace
                 StreamReader reader = new StreamReader(str);
 
                 child = new Child();
-                customTabControl1.TabPages.Add(new myTabPage(child));
-                this.customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
+                customTabControl1.TabPages.Add(new myTabPage(child, Path.GetFileName(openFDlg.FileName)));
+                customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
+                customTabControl1.SelectedTab.Tag = openFDlg.FileName;
 
                 child.getTextBox().Text = reader.ReadToEnd();
                 reader.Close();
@@ -56,31 +57,38 @@ namespace codespace
 
         private void saveMenu_Click(object sender, EventArgs e)
         {
-            save(customTabControl1.SelectedTab);
+            if(customTabControl1.SelectedTab.Tag == null)
+                save(customTabControl1.SelectedTab, 0);
+            else
+                save(customTabControl1.SelectedTab, 1);
         }
 
-        private bool save(TabPage tab)
+        private void saveasMenu_Click(object sender, EventArgs e)
+        {
+            save(customTabControl1.SelectedTab, 0);
+        }
+
+        private bool save(TabPage tab, int type)
         {
             var tb = (tab.Controls[0].Controls[0] as FastColoredTextBox);
-            if (tab.Tag == null)
+            if (type == 0)
             {
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     tab.Text = Path.GetFileName(saveFileDialog1.FileName);
                     tab.Tag = saveFileDialog1.FileName;
-
-                    StreamWriter write = new StreamWriter(tab.Text);
-                    write.Write(tb.Text);
-                    write.Close();
                 }
             }
 
-            return true;
-        }
+            if (tab.Tag != null)
+            {
+                StreamWriter write = new StreamWriter((String)tab.Tag);
+                write.Write(tb.Text);
+                write.Close();
 
-        private void saveasMenu_Click(object sender, EventArgs e)
-        {
-            
+                return true;
+            }
+            else return false;
         }
     }
 
@@ -92,11 +100,11 @@ namespace codespace
     public class myTabPage : TabPage
     {
         private Form frm;
-        public myTabPage (myFormPage mfp)
+        public myTabPage (myFormPage mfp, String fn)
         {
             this.frm = mfp;
             this.Controls.Add(mfp.pn);
-            this.Text = "new";
+            this.Text = fn;
         }
     }
 }
