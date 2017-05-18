@@ -36,7 +36,7 @@
             this.saveMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.saveasMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.보기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineNumMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             this.saveMenu,
             this.saveasMenu,
             this.toolStripSeparator1,
-            this.끝내기ToolStripMenuItem});
+            this.exitMenu});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.파일ToolStripMenuItem.Text = "파일";
@@ -120,11 +120,12 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
             // 
-            // 끝내기ToolStripMenuItem
+            // exitMenu
             // 
-            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            this.exitMenu.Name = "exitMenu";
+            this.exitMenu.Size = new System.Drawing.Size(178, 22);
+            this.exitMenu.Text = "끝내기";
+            this.exitMenu.Click += new System.EventHandler(this.exitMenu_Click);
             // 
             // 편집ToolStripMenuItem
             // 
@@ -333,7 +334,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveMenu;
         private System.Windows.Forms.ToolStripMenuItem saveasMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitMenu;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ToolStripMenuItem lineNumMenu;

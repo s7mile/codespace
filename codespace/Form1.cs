@@ -117,6 +117,11 @@ namespace codespace
                 tb.Print(settings);
             }
         }
+
+        private void exitMenu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
     public class myFormPage : Form
