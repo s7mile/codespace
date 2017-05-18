@@ -53,6 +53,8 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.undoBtn = new System.Windows.Forms.ToolStripButton();
             this.redoBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.WebBtn = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -225,7 +227,9 @@
             this.printBtn,
             this.toolStripSeparator2,
             this.undoBtn,
-            this.redoBtn});
+            this.redoBtn,
+            this.toolStripSeparator3,
+            this.WebBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(793, 25);
@@ -297,6 +301,21 @@
             this.redoBtn.Text = "Redo";
             this.redoBtn.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // WebBtn
+            // 
+            this.WebBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.WebBtn.Image = ((System.Drawing.Image)(resources.GetObject("WebBtn.Image")));
+            this.WebBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.WebBtn.Name = "WebBtn";
+            this.WebBtn.Size = new System.Drawing.Size(23, 22);
+            this.WebBtn.Text = "Web";
+            this.WebBtn.Click += new System.EventHandler(this.WebBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -348,6 +367,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton undoBtn;
         private System.Windows.Forms.ToolStripButton redoBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton WebBtn;
     }
 }
 

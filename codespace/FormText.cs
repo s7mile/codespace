@@ -20,7 +20,6 @@ namespace codespace
         {
             InitializeComponent();
             this.pn = panel1;
-            //this.lineNumbersForRichText1.ParentRichTextBox = this.richTextBox1;
         }
 
         public FastColoredTextBox getTextBox()

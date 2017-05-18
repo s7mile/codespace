@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using FastColoredTextBoxNS;
+using System.Diagnostics;
 
 namespace codespace
 {
@@ -121,6 +122,17 @@ namespace codespace
         private void exitMenu_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void WebBtn_Click(object sender, EventArgs e)
+        {
+            TabPage tab = customTabControl1.SelectedTab;
+            webView wv = new webView();
+            SplitContainer sc = new SplitContainer();
+            sc.Orientation = Orientation.Horizontal;
+            customTabControl1.TabPages.Add(new myTabPage(wv, tab.Text+" - web view"));
+            customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
+            //webBrowser1.Navigate();
         }
     }
 
