@@ -104,6 +104,19 @@ namespace codespace
             if (tb.RedoEnabled)
                 tb.Redo();
         }
+
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            if (tb != null)
+            {
+                var settings = new PrintDialogSettings();
+                settings.Title = customTabControl1.SelectedTab.Text;
+                settings.Header = "&b&w&b";
+                settings.Footer = "&b&p";
+                tb.Print(settings);
+            }
+        }
     }
 
     public class myFormPage : Form
