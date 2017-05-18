@@ -16,10 +16,13 @@ namespace codespace
     {
         Child child;
         int nChild = 0;
+        String filter = "텍스트 파일|*.txt|c 파일|*.c|C# 파일|*.cs|JAVA 파일|*.java|HTML 파일|*.html|CSS 파일|*.css|JavaScript 파일| *.js|모든 파일|*.*";
 
         public Form1()
         {
             InitializeComponent();
+            this.saveFileDialog1.Filter = filter;
+
         }
 
         private void newMenu_Click(object sender, EventArgs e)
@@ -31,7 +34,8 @@ namespace codespace
         private void openMenu_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFDlg = new OpenFileDialog();
-            if(openFDlg.ShowDialog() == DialogResult.OK)
+            openFDlg.Filter = filter;
+            if (openFDlg.ShowDialog() == DialogResult.OK)
             {
                 Stream str = openFDlg.OpenFile();
                 StreamReader reader = new StreamReader(str);
@@ -52,61 +56,31 @@ namespace codespace
 
         private void saveMenu_Click(object sender, EventArgs e)
         {
-            /* SaveFileDialog saveDlg = new SaveFileDialog();
-            if(saveDlg.ShowDialog() == DialogResult.OK)
-            {
-                string fName = this.customTabControl1.SelectedTab.Text;
-                StreamWriter write = new StreamWriter(fName);
-                //write.Write(this.customTabControl1.SelectedTab.);
-                write.Close();
-            } */
             save(customTabControl1.SelectedTab);
         }
 
         private bool save(TabPage tab)
         {
-            var tb = (tab.Controls[0] as FastColoredTextBox);
+            var tb = (tab.Controls[0].Controls[0] as FastColoredTextBox);
             if (tab.Tag == null)
             {
-                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.OK)
-                    return false;
-                tab.Text = Path.GetFileName(saveFileDialog1.FileName);
-                tab.Tag = saveFileDialog1.FileName;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    tab.Text = Path.GetFileName(saveFileDialog1.FileName);
+                    tab.Tag = saveFileDialog1.FileName;
 
-                StreamWriter write = new StreamWriter(tab.Text);
-                //write.Write(tb.Text);
-                //write.Close();
+                    StreamWriter write = new StreamWriter(tab.Text);
+                    write.Write(tb.Text);
+                    write.Close();
+                }
             }
-
-            /* try
-            {
-                File.WriteAllText(tab.Tag as string, tb.Text);
-                tb.IsChanged = false;
-            }
-            catch (Exception ex)
-            {
-                if (MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
-                    return save(tab);
-                else
-                    return false;
-            }
-
-            tb.Invalidate(); */
 
             return true;
         }
 
         private void saveasMenu_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveDlg = new SaveFileDialog();
-            if (saveDlg.ShowDialog() == DialogResult.OK)
-            {
-                string fName = saveDlg.FileName;
-                StreamWriter write = new StreamWriter(fName);
-                //write.Write(this.customTabControl1.SelectedTab.);
-                write.Close();
-                child.Text = fName;
-            }
+            
         }
     }
 

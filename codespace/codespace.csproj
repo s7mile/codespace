@@ -97,10 +97,6 @@
       <Project>{6DD14A85-CCFC-4774-BD26-0F5772512319}</Project>
       <Name>FastColoredTextBox</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LineNumbersControlForRichTextBox\LineNumbersControlForRichTextBox.csproj">
-      <Project>{0f06fcb2-962f-4fe4-9b6e-0b615c9a3daa}</Project>
-      <Name>LineNumbersControlForRichTextBox</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
