@@ -166,6 +166,15 @@ namespace codespace
             var wb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as WebBrowser);
             wb.Refresh();
         }
+
+        private void fontMenu_Click(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+                tb.Font = fontDialog1.Font;
+            }
+        }
     }
 
     public class myFormPage : Form
