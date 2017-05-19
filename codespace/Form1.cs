@@ -124,17 +124,6 @@ namespace codespace
             Application.Exit();
         }
 
-        private void WebBtn_Click(object sender, EventArgs e)
-        {
-            TabPage tab = customTabControl1.SelectedTab;
-            webView wv = new webView();
-            SplitContainer sc = new SplitContainer();
-            sc.Orientation = Orientation.Horizontal;
-            customTabControl1.TabPages.Add(new myTabPage(wv, tab.Text+" - web view"));
-            customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
-            //webBrowser1.Navigate();
-        }
-
         private void cutMenu_Click(object sender, EventArgs e)
         {
             var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
@@ -157,6 +146,25 @@ namespace codespace
         {
             var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
             tb.Text = "";
+        }
+
+        private void WebBtn_Click(object sender, EventArgs e)
+        {
+            TabPage tab = customTabControl1.SelectedTab;
+            webView wv = new webView();
+            SplitContainer sc = new SplitContainer();
+            Uri myUri = new Uri((string)tab.Tag);
+            sc.Orientation = Orientation.Horizontal;
+            customTabControl1.TabPages.Add(new myTabPage(wv, tab.Text + " - web view"));
+            customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
+            var wb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as WebBrowser);
+            wb.Navigate(myUri);
+        }
+        
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            var wb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as WebBrowser);
+            wb.Refresh();
         }
     }
 
