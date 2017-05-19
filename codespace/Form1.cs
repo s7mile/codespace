@@ -134,6 +134,30 @@ namespace codespace
             customTabControl1.SelectedTab = this.customTabControl1.TabPages[customTabControl1.TabPages.Count - 1];
             //webBrowser1.Navigate();
         }
+
+        private void cutMenu_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            tb.Cut();
+        }
+
+        private void copyMenu_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            tb.Copy();
+        }
+
+        private void pasteMenu_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            tb.Paste();
+        }
+
+        private void deleteMenu_Click(object sender, EventArgs e)
+        {
+            var tb = (customTabControl1.SelectedTab.Controls[0].Controls[0] as FastColoredTextBox);
+            tb.Text = "";
+        }
     }
 
     public class myFormPage : Form
