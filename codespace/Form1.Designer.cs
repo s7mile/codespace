@@ -38,8 +38,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.실행취소ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.redoMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.cutMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.copyMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,12 +50,11 @@
             this.보기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineNumMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.fontMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.찾기ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.다음찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.이전찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.customTabControl1 = new System.Windows.Forms.CustomTabControl();
+            this.button_Upload = new System.Windows.Forms.Button();
+            this.button_download = new System.Windows.Forms.Button();
+            this.listBox_filelist = new System.Windows.Forms.ListBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newBtn = new System.Windows.Forms.ToolStripButton();
@@ -68,10 +67,12 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.WebBtn = new System.Windows.Forms.ToolStripButton();
             this.refreshBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbFind = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.settingBtn = new System.Windows.Forms.ToolStripButton();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.button_Upload = new System.Windows.Forms.Button();
-            this.button_download = new System.Windows.Forms.Button();
-            this.listBox_filelist = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -85,11 +86,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.파일ToolStripMenuItem,
             this.편집ToolStripMenuItem,
-            this.보기ToolStripMenuItem,
-            this.찾기ToolStripMenuItem});
+            this.보기ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(883, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(793, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,8 +149,8 @@
             // 편집ToolStripMenuItem
             // 
             this.편집ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.실행취소ToolStripMenuItem,
-            this.toolStripMenuItem1,
+            this.undoMenu,
+            this.redoMenu,
             this.toolStripSeparator4,
             this.cutMenu,
             this.copyMenu,
@@ -162,62 +162,62 @@
             this.편집ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.편집ToolStripMenuItem.Text = "편집";
             // 
-            // 실행취소ToolStripMenuItem
+            // undoMenu
             // 
-            this.실행취소ToolStripMenuItem.Name = "실행취소ToolStripMenuItem";
-            this.실행취소ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.실행취소ToolStripMenuItem.Text = "실행취소";
-            this.실행취소ToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            this.undoMenu.Name = "undoMenu";
+            this.undoMenu.Size = new System.Drawing.Size(152, 22);
+            this.undoMenu.Text = "실행취소";
+            this.undoMenu.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // redoMenu
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.toolStripMenuItem1.Text = "다시실행";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
+            this.redoMenu.Name = "redoMenu";
+            this.redoMenu.Size = new System.Drawing.Size(152, 22);
+            this.redoMenu.Text = "다시실행";
+            this.redoMenu.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(123, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
             // 
             // cutMenu
             // 
             this.cutMenu.Name = "cutMenu";
-            this.cutMenu.Size = new System.Drawing.Size(126, 22);
+            this.cutMenu.Size = new System.Drawing.Size(152, 22);
             this.cutMenu.Text = "잘라내기";
             this.cutMenu.Click += new System.EventHandler(this.cutMenu_Click);
             // 
             // copyMenu
             // 
             this.copyMenu.Name = "copyMenu";
-            this.copyMenu.Size = new System.Drawing.Size(126, 22);
+            this.copyMenu.Size = new System.Drawing.Size(152, 22);
             this.copyMenu.Text = "복사";
             this.copyMenu.Click += new System.EventHandler(this.copyMenu_Click);
             // 
             // pasteMenu
             // 
             this.pasteMenu.Name = "pasteMenu";
-            this.pasteMenu.Size = new System.Drawing.Size(126, 22);
+            this.pasteMenu.Size = new System.Drawing.Size(152, 22);
             this.pasteMenu.Text = "붙여넣기";
             this.pasteMenu.Click += new System.EventHandler(this.pasteMenu_Click);
             // 
             // deleteMenu
             // 
             this.deleteMenu.Name = "deleteMenu";
-            this.deleteMenu.Size = new System.Drawing.Size(126, 22);
+            this.deleteMenu.Size = new System.Drawing.Size(152, 22);
             this.deleteMenu.Text = "삭제";
             this.deleteMenu.Click += new System.EventHandler(this.deleteMenu_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(123, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
             // 
             // allselMenu
             // 
             this.allselMenu.Name = "allselMenu";
-            this.allselMenu.Size = new System.Drawing.Size(126, 22);
+            this.allselMenu.Size = new System.Drawing.Size(152, 22);
             this.allselMenu.Text = "모두 선택";
             // 
             // 보기ToolStripMenuItem
@@ -243,34 +243,6 @@
             this.fontMenu.Text = "글꼴";
             this.fontMenu.Click += new System.EventHandler(this.fontMenu_Click);
             // 
-            // 찾기ToolStripMenuItem
-            // 
-            this.찾기ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.찾기ToolStripMenuItem1,
-            this.다음찾기ToolStripMenuItem,
-            this.이전찾기ToolStripMenuItem});
-            this.찾기ToolStripMenuItem.Name = "찾기ToolStripMenuItem";
-            this.찾기ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.찾기ToolStripMenuItem.Text = "찾기";
-            // 
-            // 찾기ToolStripMenuItem1
-            // 
-            this.찾기ToolStripMenuItem1.Name = "찾기ToolStripMenuItem1";
-            this.찾기ToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
-            this.찾기ToolStripMenuItem1.Text = "찾기";
-            // 
-            // 다음찾기ToolStripMenuItem
-            // 
-            this.다음찾기ToolStripMenuItem.Name = "다음찾기ToolStripMenuItem";
-            this.다음찾기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.다음찾기ToolStripMenuItem.Text = "다음찾기";
-            // 
-            // 이전찾기ToolStripMenuItem
-            // 
-            this.이전찾기ToolStripMenuItem.Name = "이전찾기ToolStripMenuItem";
-            this.이전찾기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.이전찾기ToolStripMenuItem.Text = "이전찾기";
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -290,8 +262,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.button_Upload);
             this.splitContainer1.Panel2.Controls.Add(this.button_download);
             this.splitContainer1.Panel2.Controls.Add(this.listBox_filelist);
-            this.splitContainer1.Size = new System.Drawing.Size(883, 581);
-            this.splitContainer1.SplitterDistance = 681;
+            this.splitContainer1.Size = new System.Drawing.Size(793, 326);
+            this.splitContainer1.SplitterDistance = 604;
             this.splitContainer1.TabIndex = 5;
             // 
             // customTabControl1
@@ -321,12 +293,46 @@
             this.customTabControl1.Location = new System.Drawing.Point(0, 0);
             this.customTabControl1.Name = "customTabControl1";
             this.customTabControl1.SelectedIndex = 0;
-            this.customTabControl1.Size = new System.Drawing.Size(681, 581);
+            this.customTabControl1.Size = new System.Drawing.Size(604, 326);
             this.customTabControl1.TabIndex = 6;
+            // 
+            // button_Upload
+            // 
+            this.button_Upload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Upload.Location = new System.Drawing.Point(110, 297);
+            this.button_Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Upload.Name = "button_Upload";
+            this.button_Upload.Size = new System.Drawing.Size(76, 23);
+            this.button_Upload.TabIndex = 14;
+            this.button_Upload.Text = "Upload";
+            this.button_Upload.UseVisualStyleBackColor = true;
+            // 
+            // button_download
+            // 
+            this.button_download.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_download.Location = new System.Drawing.Point(-1, 297);
+            this.button_download.Name = "button_download";
+            this.button_download.Size = new System.Drawing.Size(76, 23);
+            this.button_download.TabIndex = 13;
+            this.button_download.Text = "Download";
+            this.button_download.UseVisualStyleBackColor = true;
+            // 
+            // listBox_filelist
+            // 
+            this.listBox_filelist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_filelist.FormattingEnabled = true;
+            this.listBox_filelist.ItemHeight = 12;
+            this.listBox_filelist.Location = new System.Drawing.Point(0, 0);
+            this.listBox_filelist.Name = "listBox_filelist";
+            this.listBox_filelist.ScrollAlwaysVisible = true;
+            this.listBox_filelist.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_filelist.Size = new System.Drawing.Size(185, 292);
+            this.listBox_filelist.TabIndex = 12;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newBtn,
             this.openBtn,
@@ -337,10 +343,14 @@
             this.redoBtn,
             this.toolStripSeparator3,
             this.WebBtn,
-            this.refreshBtn});
+            this.refreshBtn,
+            this.toolStripSeparator5,
+            this.tbFind,
+            this.toolStripLabel1,
+            this.settingBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(208, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(793, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -434,46 +444,45 @@
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
-            // button_Upload
+            // toolStripSeparator5
             // 
-            this.button_Upload.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Upload.Location = new System.Drawing.Point(119, 519);
-            this.button_Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Upload.Name = "button_Upload";
-            this.button_Upload.Size = new System.Drawing.Size(76, 51);
-            this.button_Upload.TabIndex = 17;
-            this.button_Upload.Text = "Upload";
-            this.button_Upload.UseVisualStyleBackColor = true;
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // button_download
+            // tbFind
             // 
-            this.button_download.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_download.Location = new System.Drawing.Point(2, 518);
-            this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(76, 51);
-            this.button_download.TabIndex = 16;
-            this.button_download.Text = "Download";
-            this.button_download.UseVisualStyleBackColor = true;
+            this.tbFind.AcceptsReturn = true;
+            this.tbFind.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tbFind.Name = "tbFind";
+            this.tbFind.Size = new System.Drawing.Size(116, 25);
+            this.tbFind.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFind_KeyPress);
             // 
-            // listBox_filelist
+            // toolStripLabel1
             // 
-            this.listBox_filelist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox_filelist.FormattingEnabled = true;
-            this.listBox_filelist.ItemHeight = 12;
-            this.listBox_filelist.Location = new System.Drawing.Point(2, 1);
-            this.listBox_filelist.Name = "listBox_filelist";
-            this.listBox_filelist.ScrollAlwaysVisible = true;
-            this.listBox_filelist.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_filelist.Size = new System.Drawing.Size(196, 508);
-            this.listBox_filelist.TabIndex = 15;
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel1.Text = "Find: ";
+            // 
+            // settingBtn
+            // 
+            this.settingBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.settingBtn.Image = global::codespace.Properties.Resources.setting;
+            this.settingBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.settingBtn.Name = "settingBtn";
+            this.settingBtn.Size = new System.Drawing.Size(23, 22);
+            this.settingBtn.Text = "FTP설정";
+            this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 633);
+            this.ClientSize = new System.Drawing.Size(793, 378);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
@@ -502,7 +511,6 @@
         private System.Windows.Forms.ToolStripMenuItem openMenu;
         private System.Windows.Forms.ToolStripMenuItem 편집ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 보기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 찾기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveMenu;
         private System.Windows.Forms.ToolStripMenuItem saveasMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -521,8 +529,8 @@
         private System.Windows.Forms.ToolStripButton redoBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton WebBtn;
-        private System.Windows.Forms.ToolStripMenuItem 실행취소ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem undoMenu;
+        private System.Windows.Forms.ToolStripMenuItem redoMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem cutMenu;
         private System.Windows.Forms.ToolStripMenuItem copyMenu;
@@ -530,15 +538,17 @@
         private System.Windows.Forms.ToolStripMenuItem deleteMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem allselMenu;
-        private System.Windows.Forms.ToolStripMenuItem 찾기ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 다음찾기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 이전찾기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton refreshBtn;
         private System.Windows.Forms.ToolStripMenuItem fontMenu;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Button button_Upload;
         private System.Windows.Forms.Button button_download;
         private System.Windows.Forms.ListBox listBox_filelist;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton settingBtn;
+        private System.Windows.Forms.ToolStripTextBox tbFind;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

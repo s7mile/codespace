@@ -58,6 +58,12 @@
     <Compile Include="FormText.Designer.cs">
       <DependentUpon>FormText.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ftp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ftp.Designer.cs">
+      <DependentUpon>Ftp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="webView.cs">
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormText.resx">
       <DependentUpon>FormText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ftp.resx">
+      <DependentUpon>Ftp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
