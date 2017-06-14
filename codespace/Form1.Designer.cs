@@ -49,12 +49,12 @@
             this.allselMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.보기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineNumMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.찾기ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.다음찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.이전찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.customTabControl1 = new System.Windows.Forms.CustomTabControl();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -68,8 +68,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.WebBtn = new System.Windows.Forms.ToolStripButton();
             this.refreshBtn = new System.Windows.Forms.ToolStripButton();
-            this.fontMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.button_Upload = new System.Windows.Forms.Button();
+            this.button_download = new System.Windows.Forms.Button();
+            this.listBox_filelist = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -87,7 +89,7 @@
             this.찾기ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(793, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(883, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -163,59 +165,59 @@
             // 실행취소ToolStripMenuItem
             // 
             this.실행취소ToolStripMenuItem.Name = "실행취소ToolStripMenuItem";
-            this.실행취소ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.실행취소ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.실행취소ToolStripMenuItem.Text = "실행취소";
             this.실행취소ToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuItem1.Text = "다시실행";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(123, 6);
             // 
             // cutMenu
             // 
             this.cutMenu.Name = "cutMenu";
-            this.cutMenu.Size = new System.Drawing.Size(152, 22);
+            this.cutMenu.Size = new System.Drawing.Size(126, 22);
             this.cutMenu.Text = "잘라내기";
             this.cutMenu.Click += new System.EventHandler(this.cutMenu_Click);
             // 
             // copyMenu
             // 
             this.copyMenu.Name = "copyMenu";
-            this.copyMenu.Size = new System.Drawing.Size(152, 22);
+            this.copyMenu.Size = new System.Drawing.Size(126, 22);
             this.copyMenu.Text = "복사";
             this.copyMenu.Click += new System.EventHandler(this.copyMenu_Click);
             // 
             // pasteMenu
             // 
             this.pasteMenu.Name = "pasteMenu";
-            this.pasteMenu.Size = new System.Drawing.Size(152, 22);
+            this.pasteMenu.Size = new System.Drawing.Size(126, 22);
             this.pasteMenu.Text = "붙여넣기";
             this.pasteMenu.Click += new System.EventHandler(this.pasteMenu_Click);
             // 
             // deleteMenu
             // 
             this.deleteMenu.Name = "deleteMenu";
-            this.deleteMenu.Size = new System.Drawing.Size(152, 22);
+            this.deleteMenu.Size = new System.Drawing.Size(126, 22);
             this.deleteMenu.Text = "삭제";
             this.deleteMenu.Click += new System.EventHandler(this.deleteMenu_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(123, 6);
             // 
             // allselMenu
             // 
             this.allselMenu.Name = "allselMenu";
-            this.allselMenu.Size = new System.Drawing.Size(152, 22);
+            this.allselMenu.Size = new System.Drawing.Size(126, 22);
             this.allselMenu.Text = "모두 선택";
             // 
             // 보기ToolStripMenuItem
@@ -230,9 +232,16 @@
             // lineNumMenu
             // 
             this.lineNumMenu.Name = "lineNumMenu";
-            this.lineNumMenu.Size = new System.Drawing.Size(152, 22);
+            this.lineNumMenu.Size = new System.Drawing.Size(110, 22);
             this.lineNumMenu.Text = "줄번호";
             this.lineNumMenu.Click += new System.EventHandler(this.lineNumMenu_Click);
+            // 
+            // fontMenu
+            // 
+            this.fontMenu.Name = "fontMenu";
+            this.fontMenu.Size = new System.Drawing.Size(110, 22);
+            this.fontMenu.Text = "글꼴";
+            this.fontMenu.Click += new System.EventHandler(this.fontMenu_Click);
             // 
             // 찾기ToolStripMenuItem
             // 
@@ -273,26 +282,17 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.customTabControl1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel2.Controls.Add(this.customTabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(793, 326);
-            this.splitContainer1.SplitterDistance = 178;
+            this.splitContainer1.Panel2.Controls.Add(this.button_Upload);
+            this.splitContainer1.Panel2.Controls.Add(this.button_download);
+            this.splitContainer1.Panel2.Controls.Add(this.listBox_filelist);
+            this.splitContainer1.Size = new System.Drawing.Size(883, 581);
+            this.splitContainer1.SplitterDistance = 681;
             this.splitContainer1.TabIndex = 5;
-            // 
-            // treeView1
-            // 
-            this.treeView1.BackColor = System.Drawing.Color.White;
-            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.ForeColor = System.Drawing.Color.Black;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(178, 326);
-            this.treeView1.TabIndex = 7;
             // 
             // customTabControl1
             // 
@@ -321,11 +321,12 @@
             this.customTabControl1.Location = new System.Drawing.Point(0, 0);
             this.customTabControl1.Name = "customTabControl1";
             this.customTabControl1.SelectedIndex = 0;
-            this.customTabControl1.Size = new System.Drawing.Size(611, 326);
+            this.customTabControl1.Size = new System.Drawing.Size(681, 581);
             this.customTabControl1.TabIndex = 6;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newBtn,
             this.openBtn,
@@ -339,7 +340,7 @@
             this.refreshBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(793, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(208, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -433,18 +434,46 @@
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
-            // fontMenu
+            // button_Upload
             // 
-            this.fontMenu.Name = "fontMenu";
-            this.fontMenu.Size = new System.Drawing.Size(152, 22);
-            this.fontMenu.Text = "글꼴";
-            this.fontMenu.Click += new System.EventHandler(this.fontMenu_Click);
+            this.button_Upload.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Upload.Location = new System.Drawing.Point(119, 519);
+            this.button_Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Upload.Name = "button_Upload";
+            this.button_Upload.Size = new System.Drawing.Size(76, 51);
+            this.button_Upload.TabIndex = 17;
+            this.button_Upload.Text = "Upload";
+            this.button_Upload.UseVisualStyleBackColor = true;
+            // 
+            // button_download
+            // 
+            this.button_download.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_download.Location = new System.Drawing.Point(2, 518);
+            this.button_download.Name = "button_download";
+            this.button_download.Size = new System.Drawing.Size(76, 51);
+            this.button_download.TabIndex = 16;
+            this.button_download.Text = "Download";
+            this.button_download.UseVisualStyleBackColor = true;
+            // 
+            // listBox_filelist
+            // 
+            this.listBox_filelist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_filelist.FormattingEnabled = true;
+            this.listBox_filelist.ItemHeight = 12;
+            this.listBox_filelist.Location = new System.Drawing.Point(2, 1);
+            this.listBox_filelist.Name = "listBox_filelist";
+            this.listBox_filelist.ScrollAlwaysVisible = true;
+            this.listBox_filelist.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_filelist.Size = new System.Drawing.Size(196, 508);
+            this.listBox_filelist.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 378);
+            this.ClientSize = new System.Drawing.Size(883, 633);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
@@ -479,7 +508,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitMenu;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ToolStripMenuItem lineNumMenu;
         private System.Windows.Forms.CustomTabControl customTabControl1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -508,6 +536,9 @@
         private System.Windows.Forms.ToolStripButton refreshBtn;
         private System.Windows.Forms.ToolStripMenuItem fontMenu;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Button button_Upload;
+        private System.Windows.Forms.Button button_download;
+        private System.Windows.Forms.ListBox listBox_filelist;
     }
 }
 
