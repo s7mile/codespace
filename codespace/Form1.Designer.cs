@@ -299,7 +299,7 @@
             // button_Upload
             // 
             this.button_Upload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Upload.Location = new System.Drawing.Point(110, 297);
+            this.button_Upload.Location = new System.Drawing.Point(105, 297);
             this.button_Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Upload.Name = "button_Upload";
             this.button_Upload.Size = new System.Drawing.Size(76, 23);
@@ -310,7 +310,7 @@
             // button_download
             // 
             this.button_download.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_download.Location = new System.Drawing.Point(-1, 297);
+            this.button_download.Location = new System.Drawing.Point(4, 297);
             this.button_download.Name = "button_download";
             this.button_download.Size = new System.Drawing.Size(76, 23);
             this.button_download.TabIndex = 13;

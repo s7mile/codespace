@@ -31,3 +31,4 @@
 \\mac\Home\Desktop\프로젝트\codespace\codespace\obj\Debug\codespace.exe
 \\mac\Home\Desktop\프로젝트\codespace\codespace\obj\Debug\codespace.pdb
 \\mac\Home\Desktop\프로젝트\codespace\codespace\obj\Debug\codespace.Ftp.resources
+\\Mac\Home\Desktop\과제\소실\프로젝트\codespace\codespace\obj\Debug\codespace.Ftp.resources
